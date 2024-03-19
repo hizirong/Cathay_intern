@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import openai
 
 # 設定OpenAI API密鑰
-openai.api_key = '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'
+openai.api_key = 'API密鑰'
 
 
 def get_news(url):
