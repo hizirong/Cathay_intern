@@ -28,7 +28,7 @@ def summarize_news(content):
         response = openai.ChatCompletion.create(
             model="gpt-3.5-turbo",
             messages=[
-                {"role": "system", "content": "以下是新聞內容，幫我用150字總結"},
+                {"role": "system", "content": "以下是新聞內容，幫我用150字以內總結"},
                 {"role": "user", "content": content}
             ],
             temperature=0.5,
@@ -45,5 +45,6 @@ def summarize_news(content):
 # run
 url = 'https://www.ithome.com.tw/news/152373'
 news_content = get_news(url)
+#print('所有內容： \n',news_content)
 news_summary = summarize_news(news_content)
-print(news_summary)
+print('新聞內容總結： \n',news_summary)
